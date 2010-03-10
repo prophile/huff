@@ -36,8 +36,12 @@ HuffmanTree::HuffmanTree(const HuffmanTree& otherTree)
 {
 	if (otherTree._left)
 		_left = new HuffmanTree(*(otherTree._left));
+	else
+		_left = NULL;
 	if (otherTree._right)
 		_right = new HuffmanTree(*(otherTree._right));
+	else
+		_left = NULL;
 }
 
 HuffmanTree::~HuffmanTree()
