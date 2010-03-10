@@ -1,12 +1,21 @@
 #include "HuffmanTree.h"
+#include <stdlib.h>
 
 HuffmanTree::HuffmanTree(HuffmanTree* left, HuffmanTree* right)
 : _frequency(left->_frequency + right->_frequency),
   _isLeaf(false),
-  _value(""),
-  _left(left),
-  _right(right)
+  _value("")
 {
+	if (rand() % 2 == 0)
+	{
+		_left = left;
+		_right = right;
+	}
+	else
+	{
+		_left = right;
+		_right = left;
+	}
 }
 
 HuffmanTree::HuffmanTree(unsigned long frequency, const std::string& value)
