@@ -1,0 +1,7 @@
+huff is a tool to construct huffman tables.
+
+Your input should be of this format:
+ <frequency> <string>
+
+and your output will come in the format:
+ <binary huffman code> <string>
